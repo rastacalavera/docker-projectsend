@@ -25,6 +25,11 @@ param_usage_include_env: true
 param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
   - { env_var: "MAX_UPLOAD", env_value: "5000", desc: "To set maximum upload size (in MB), default if unset is 5000." }
+  - { env_var: "DB_HOST", env_value: "<yourdbhost>", desc: "for specifying the database host" }
+  - { env_var: "DB_USER", env_value: "<yourdbuser>", desc: "for specifying the database user" }
+  - { env_var: "DB_PASS", env_value: "<yourdbpass>", desc: "for specifying the database password" }
+  - { env_var: "DB_DATABASE", env_value: "projectsend", desc: "for specifying the database to be used (non-alphanumeric passwords must be properly escaped.)" }
+
 param_usage_include_vols: true
 param_volumes:
   - { vol_path: "/config", vol_host_path: "<path to data>", desc: "Where to store projectsend config files." }
